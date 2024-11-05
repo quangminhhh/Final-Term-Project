@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Circular Linked List Visualization";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div id="linked-list-status" style="color: red; font-weight: bold;"></div> <!-- Thông báo trạng thái -->
+<div id="linked-list">
+    <!-- Nơi hiển thị danh sách liên kết vòng -->
+</div>
+
+<input type="number" id="node-value" placeholder="Enter value" />
+<button onclick="addNode()">Add Node</button>
+<button onclick="deleteFirstNode()">Delete First Node</button>
+<button onclick="deleteLastNode()">Delete Last Node</button>
+
+<script src="~/js/linkedListScripts.js"></script>

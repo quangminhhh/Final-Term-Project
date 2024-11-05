@@ -1,5 +1,10 @@
+/* Thiết lập font-size cho toàn trang */
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -8,15 +13,52 @@ html {
   }
 }
 
+/* Điều chỉnh các thành phần cần focus */
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+/* Đặt body chiếm phần còn lại của màn hình, đẩy footer xuống */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-body {
-  margin-bottom: 60px;
+/* Container nội dung */
+.container {
+  flex: 1;
+}
+
+/* Thiết lập footer luôn ở đáy */
+footer {
+  background-color: #f8f9fa; /* Màu nền footer */
+  padding: 1rem 0;           /* Khoảng cách trong */
+  text-align: center;        /* Căn giữa nội dung */
+  margin-top: auto;          /* Đẩy footer xuống đáy */
+  width: 100%;
+}
+/* Đổi màu nền và màu chữ khi hover */
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Màu chữ khi hover */
+  background-color: #aed5ff; /* Màu nền khi hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng mượt */
+  border-radius: 15px ;
+}
+#linked-list {
+  display: flex;
+  gap: 10px;
+}
+
+.node {
+  width: 50px;
+  height: 50px;
+  background-color: #258cfb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
 }
